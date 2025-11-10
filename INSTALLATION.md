@@ -123,12 +123,16 @@ Les tests avec demande de rappel sont marqués avec ✓ dans la colonne "Rappel"
 
 ## Tests effectués par le plugin
 
-### Vérifications DNS (Score sur 100)
-- ✓ Enregistrements A (20 points)
-- ✓ Enregistrements MX (20 points)
-- ✓ Enregistrements NS (20 points)
-- ✓ DNSSEC (30 points)
+### Vérifications DNS (Score sur 130)
+- ✓ Enregistrements A/AAAA (20 points)
+- ✓ Enregistrements NS - au moins 2 (15 points)
+- ✓ Cohérence NS (10 points)
+- ✓ Enregistrement SOA (10 points)
+- ✓ Absence de CNAME sur racine (5 points)
 - ✓ Enregistrements TXT (10 points)
+- ✓ Reverse DNS PTR (10 points)
+- ✓ Enregistrements MX (20 points)
+- ✓ DNSSEC (30 points)
 
 ### Vérifications Email (Score sur 100)
 - ✓ SPF - Sender Policy Framework (35 points)

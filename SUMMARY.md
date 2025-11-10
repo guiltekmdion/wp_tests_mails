@@ -128,14 +128,18 @@ wp-domain-security-checker/
 
 ## 📊 Scoring détaillé
 
-### DNS (Total : 100 points)
+### DNS (Total : 130 points)
 | Vérification | Points | Critère |
 |--------------|--------|---------|
-| Enregistrements A | 20 | Présence d'au moins 1 enregistrement |
-| Enregistrements MX | 20 | Présence d'au moins 1 serveur mail |
-| Enregistrements NS | 20 | Présence d'au moins 1 serveur DNS |
-| DNSSEC | 30 | Détection de l'activation DNSSEC |
+| Enregistrements A/AAAA | 20 | Présence d'au moins 1 enregistrement A ou AAAA |
+| Enregistrements NS | 15 | Présence d'au moins 2 serveurs NS distincts |
+| NS cohérents | 10 | Vérifier que les NS répondent de manière identique |
+| Enregistrement SOA | 10 | Présence et validité de l'enregistrement SOA |
+| CNAME check | 5 | Absence de CNAME sur la racine du domaine (bonne pratique) |
 | Enregistrements TXT | 10 | Présence d'enregistrements TXT |
+| Reverse DNS (PTR) | 10 | Résolution inverse sur IP du A principal |
+| Enregistrements MX | 20 | Présence d'au moins 1 serveur mail |
+| DNSSEC | 30 | Détection de l'activation DNSSEC |
 
 ### Email (Total : 100 points)
 | Vérification | Points | Critère |

@@ -5,11 +5,15 @@ Plugin WordPress permettant de tester la sécurité d'un nom de domaine via un s
 ## Fonctionnalités
 
 ### 1. Vérifications DNS
-- **Enregistrements A** : Vérification de la résolution du domaine
-- **Enregistrements MX** : Vérification des serveurs de messagerie
-- **Enregistrements NS** : Vérification des serveurs de noms
-- **DNSSEC** : Détection de la sécurité DNS
+- **Enregistrements A/AAAA** : Vérification de la résolution du domaine (IPv4 et IPv6)
+- **Enregistrements NS** : Vérification des serveurs de noms (minimum 2 requis)
+- **Cohérence NS** : Vérification que tous les NS répondent de manière identique
+- **Enregistrement SOA** : Vérification de la présence et validité
+- **CNAME** : Vérification de l'absence de CNAME sur la racine (bonne pratique)
 - **Enregistrements TXT** : Liste des enregistrements texte
+- **Reverse DNS (PTR)** : Vérification de la résolution inverse
+- **Enregistrements MX** : Vérification des serveurs de messagerie
+- **DNSSEC** : Détection de la sécurité DNS
 
 ### 2. Vérifications Email
 - **SPF** (Sender Policy Framework) : Politique d'envoi d'emails
@@ -72,12 +76,16 @@ Accédez à l'interface d'administration via le menu **Security Tests** dans Wor
 
 ## Scoring
 
-### DNS (100 points)
-- Enregistrements A : 20 points
-- Enregistrements MX : 20 points
-- Enregistrements NS : 20 points
-- DNSSEC : 30 points
+### DNS (130 points)
+- Enregistrements A/AAAA : 20 points
+- Enregistrements NS (au moins 2) : 15 points
+- Cohérence NS : 10 points
+- Enregistrement SOA : 10 points
+- Absence de CNAME sur racine : 5 points
 - Enregistrements TXT : 10 points
+- Reverse DNS (PTR) : 10 points
+- Enregistrements MX : 20 points
+- DNSSEC : 30 points
 
 ### Email (100 points)
 - SPF : 35 points

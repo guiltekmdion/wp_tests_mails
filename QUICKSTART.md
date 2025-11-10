@@ -94,7 +94,7 @@ Dans votre thème, ajoutez :
 
 | Fonction | Description |
 |----------|-------------|
-| 🔍 **DNS Check** | Vérifie A, MX, NS, DNSSEC, TXT |
+| 🔍 **DNS Check** | Vérifie A/AAAA, NS, SOA, CNAME, TXT, PTR, MX, DNSSEC |
 | 📧 **Email Security** | Vérifie SPF, DMARC, DKIM |
 | 📊 **Scoring** | Note sur 100 (DNS + Email) |
 | 💾 **Storage** | Enregistre tous les tests en BDD |
