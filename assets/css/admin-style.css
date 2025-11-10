@@ -1,0 +1,158 @@
+/* Admin styles for Domain Security Checker */
+
+.wpdsc-admin-stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.wpdsc-stat-box {
+    background: #fff;
+    border-left: 4px solid #0073aa;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    min-width: 150px;
+}
+
+.wpdsc-stat-box h3 {
+    margin: 0 0 5px 0;
+    font-size: 32px;
+    color: #0073aa;
+}
+
+.wpdsc-stat-box p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.wpdsc-admin-info {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.wpdsc-admin-info code {
+    background: #f0f0f1;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.wpdsc-admin-info ul {
+    margin-left: 20px;
+}
+
+.wpdsc-admin-detail {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.wpdsc-admin-detail h2 {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.wpdsc-admin-detail h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.wpdsc-score-display {
+    margin: 20px 0;
+}
+
+.wpdsc-score-bar-admin {
+    background-color: #e0e0e0;
+    height: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.wpdsc-score-value-admin {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: width 0.3s ease;
+}
+
+.wpdsc-status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wpdsc-status-ok {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.wpdsc-status-avertissement {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.wpdsc-status-erreur {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.wpdsc-status-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Table improvements */
+.wp-list-table .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.widefat td code {
+    background: #f0f0f1;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all;
+}
+
+.widefat td small {
+    color: #666;
+}
+
+.form-table th {
+    width: 200px;
+    padding: 15px 10px 15px 0;
+}
+
+.form-table td {
+    padding: 15px 10px;
+}
+
+/* Responsive admin */
+@media screen and (max-width: 782px) {
+    .wpdsc-admin-stats {
+        flex-direction: column;
+    }
+    
+    .wpdsc-stat-box {
+        width: 100%;
+    }
+}
