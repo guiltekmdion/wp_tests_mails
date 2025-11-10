@@ -1,0 +1,223 @@
+/* Frontend styles for Domain Security Checker */
+
+.wpdsc-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wpdsc-form-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.wpdsc-form-wrapper h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.wpdsc-form-group {
+    margin-bottom: 20px;
+}
+
+.wpdsc-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+.wpdsc-form-group input[type="text"],
+.wpdsc-form-group input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.wpdsc-form-group input[type="text"]:focus,
+.wpdsc-form-group input[type="email"]:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+.wpdsc-checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.wpdsc-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.wpdsc-submit-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wpdsc-submit-btn:hover {
+    background-color: #005a87;
+}
+
+.wpdsc-submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.wpdsc-loading {
+    text-align: center;
+    padding: 30px;
+}
+
+.wpdsc-spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0073aa;
+    border-radius: 50%;
+    animation: wpdsc-spin 1s linear infinite;
+}
+
+@keyframes wpdsc-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.wpdsc-results {
+    margin-top: 20px;
+}
+
+.wpdsc-results-content h3 {
+    color: #333;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0073aa;
+}
+
+.wpdsc-score-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.wpdsc-score-section h4 {
+    margin-top: 0;
+    color: #444;
+    font-size: 18px;
+}
+
+.wpdsc-score-bar {
+    background-color: #e0e0e0;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.wpdsc-score-value {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #66bb6a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: width 0.5s ease;
+}
+
+.wpdsc-rating {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.wpdsc-checks-list {
+    margin-top: 15px;
+}
+
+.wpdsc-check-item {
+    padding: 12px;
+    margin: 8px 0;
+    background: white;
+    border-left: 4px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.wpdsc-check-item strong {
+    color: #333;
+}
+
+.wpdsc-status-ok {
+    border-left-color: #4caf50;
+}
+
+.wpdsc-status-avertissement {
+    border-left-color: #ff9800;
+}
+
+.wpdsc-status-erreur {
+    border-left-color: #f44336;
+}
+
+.wpdsc-status-info {
+    border-left-color: #2196f3;
+}
+
+.wpdsc-check-icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    margin-right: 8px;
+}
+
+.wpdsc-notification {
+    background: #e7f4f9;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #0073aa;
+    margin-top: 20px;
+}
+
+.wpdsc-notification p {
+    margin: 0;
+    color: #0073aa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wpdsc-container {
+        margin: 10px;
+    }
+    
+    .wpdsc-form-wrapper {
+        padding: 20px;
+    }
+}
